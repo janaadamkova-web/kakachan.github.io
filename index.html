@@ -3,72 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Janis | Profil</title>
+    <title>Janis | Vítejte v Matrixu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Nabla&display=swap" rel="stylesheet">
     <style>
+        /* Definice šílených animací */
+        @keyframes backgroundPsychadelic {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes rotateContainer {
+            0% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(3deg) scale(1.02); }
+            100% { transform: rotate(0deg) scale(1); }
+        }
+
+        @keyframes glitchText {
+            0% { text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff; }
+            25% { text-shadow: -2px 2px #ff00ff, 2px -2px #00ffff; }
+            50% { text-shadow: 2px -2px #ff00ff, -2px 2px #00ffff; }
+            75% { text-shadow: -2px -2px #ff00ff, 2px 2px #00ffff; }
+            100% { text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff; }
+        }
+
+        @keyframes crazyButton {
+            0% { box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de; }
+            100% { box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de; }
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
+            /* Psychedelické pozadí */
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: backgroundPsychadelic 10s ease infinite;
+            
+            color: #fff;
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.4;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
+            overflow: hidden; /* Zabrání scrollování, pokud to přeženeme */
+            cursor: url('https://cur.cursors-4u.net/symbols/sym-1/sym46.cur'), auto; /* Divný kurzor */
         }
+
         .container {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            max-width: 420px;
+            background: rgba(0, 0, 0, 0.8); /* Černé průhledné pozadí */
+            padding: 3rem;
+            border-radius: 0; /* Ostré rohy jsou divnější */
+            box-shadow: 0 0 50px rgba(0, 255, 0, 0.5); /* Zelené neonové záření */
+            max-width: 450px;
             text-align: center;
-            border-top: 5px solid #d35400; /* Barevný detail nahoře */
+            border: 10px dashed #ff00ff; /* Bláznivý rámeček */
+            animation: rotateContainer 5s linear infinite;
+            position: relative;
         }
+
+        /* Glitch efekt pro nadpis */
         h1 { 
-            color: #d35400; 
+            font-family: 'Nabla', cursive; /* Extrémně divný font */
+            font-size: 4rem;
             margin-top: 0;
-            font-size: 2rem;
+            margin-bottom: 10px;
+            animation: glitchText 0.5s linear infinite;
+            color: #fff;
+            text-transform: uppercase;
         }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        strong {
+            color: #00ff00; /* Neonově zelená */
+            font-family: 'Creepster', cursive; /* Hororový font pro důležitá slova */
+            font-size: 1.4rem;
+        }
+
         .interests { 
             font-style: italic; 
-            color: #777; 
-            margin: 15px 0;
-            padding: 10px;
-            border-top: 1px solid #eee;
-            border-bottom: 1px solid #eee;
+            color: #ff00de; /* Neonově růžová */
+            margin: 20px 0;
+            padding: 15px;
+            border: 2px solid #00ffff; /* Neonově modrá */
+            background: repeating-linear-gradient(
+              45deg,
+              #000,
+              #000 10px,
+              #111 10px,
+              #111 20px
+            );
         }
         
-        /* Styl tlačítka pro navigaci na svíčkovou */
+        /* Totálně šílené tlačítko */
         .btn-navigator {
             display: inline-block;
-            margin-top: 25px;
-            padding: 12px 30px;
-            background: linear-gradient(135deg, #d9534f 0%, #c9302c 100%);
-            color: white;
+            margin-top: 30px;
+            padding: 20px 40px;
+            background: #000;
+            color: #ff00de;
             text-decoration: none;
-            border-radius: 50px; /* Zakulacené moderní tlačítko */
+            border: 5px solid #ff00de;
             font-weight: bold;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(217, 83, 79, 0.3);
+            font-size: 1.5rem;
+            font-family: 'Creepster', cursive;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.1s ease;
+            animation: crazyButton 1.5s ease-in-out infinite alternate;
+            position: relative;
+            z-index: 1;
         }
         
         .btn-navigator:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(217, 83, 79, 0.4);
-            filter: brightness(1.1);
+            background: #ff00de;
+            color: #000;
+            transform: scale(1.2) rotate(-5deg);
+            animation: none; /* Vypne pulzování při najetí */
+            box-shadow: 0 0 100px #ff00de;
         }
 
         .btn-navigator:active {
-            transform: translateY(0);
+            transform: scale(0.9) rotate(5deg);
+        }
+
+        /* Divný element navíc pro efekt */
+        .container::before {
+            content: 'TYPE SHIT';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            background: #ff00de;
+            color: #000;
+            padding: 5px 10px;
+            font-family: sans-serif;
+            font-size: 0.8rem;
+            transform: rotate(-15deg);
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>Ahoj, já jsem Janis</h1>
+        <h1>JANIS</h1>
         
         <p>Mám ráda <strong>svíčkovou a svíčky</strong>. Doma mi dělá společnost kočka a ze všeho nejraději spím.</p>
         
@@ -76,7 +158,7 @@
         
         <p>Sportuju, lezu a taekwonduju. Mám pár kamarádů a mám je celkem ráda.</p>
 
-        <a href="svickova.html" class="btn-navigator">🥩 Vše o svíčkové</a>
+        <a href="svickova.html" class="btn-navigator">🥩 SVÍČKOVÁ!!!</a>
     </div>
 
 </body>
