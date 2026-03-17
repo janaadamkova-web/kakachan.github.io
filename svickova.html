@@ -3,130 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vše o svíčkové | Průvodce masem</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <title>666 | MASO JE MASO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&family=Special+Elite&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #8b0000;
-            --bg-color: #fcfaf7;
-            --text-color: #2c3e50;
-            --accent-color: #e67e22;
+            --blood-red: #660000;
+            --dark-void: #050000;
+            --corpse-gray: #3d3d3d;
+            --meat-pink: #ff4d4d;
+        }
+
+        /* Animace tekoucí krve na pozadí */
+        @keyframes bloodRain {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 0% 1000%; }
+        }
+
+        /* Zlověstné blikání celého webu */
+        @keyframes seizure {
+            0% { opacity: 1; }
+            98% { opacity: 1; }
+            99% { opacity: 0.4; transform: scale(1.005); }
+            100% { opacity: 1; }
         }
 
         body { 
-            font-family: 'Source Sans Pro', sans-serif; 
-            line-height: 1.8; 
-            max-width: 850px; 
-            margin: 0 auto; 
-            padding: 40px 20px; 
-            color: var(--text-color);
-            background-color: var(--bg-color);
+            background-color: var(--dark-void);
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(102,0,0,0.5)), url('https://www.transparenttextures.com/patterns/blood-splatter.png');
+            color: #ccc;
+            font-family: 'Special Elite', courier, serif;
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden;
+            animation: seizure 0.2s infinite;
         }
 
         header {
             text-align: center;
-            margin-bottom: 50px;
+            padding: 60px 0;
+            border-bottom: 5px double var(--blood-red);
+            background: rgba(0,0,0,0.9);
         }
 
         h1 { 
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            color: var(--primary-color); 
-            margin-bottom: 10px;
-            letter-spacing: -1px;
+            font-family: 'Nosifer', cursive;
+            font-size: 5rem;
+            color: var(--blood-red);
+            margin: 0;
+            text-shadow: 0 0 20px #000, 5px 5px 10px #ff0000;
+            letter-spacing: -5px;
         }
 
         .subtitle {
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-size: 0.9rem;
-            color: var(--accent-color);
-            font-weight: 600;
-        }
-
-        h2 { 
-            font-family: 'Playfair Display', serif;
-            color: var(--primary-color); 
-            margin-top: 40px;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
-        }
-
-        p { margin-bottom: 20px; font-size: 1.1rem; }
-
-        strong { color: #000; }
-
-        .highlight { 
-            background: #fff; 
-            padding: 25px; 
-            border-left: 4px solid var(--accent-color); 
-            font-style: italic; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            margin: 30px 0;
-            font-size: 1.2rem;
-            line-height: 1.6;
+            font-family: 'Creepster', cursive;
+            color: var(--meat-pink);
+            font-size: 1.5rem;
+            letter-spacing: 10px;
+            display: block;
+            margin-top: -20px;
         }
 
         .card {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            background: linear-gradient(rgba(0,0,0,0.9), rgba(20,0,0,0.95));
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 60px;
+            border: 2px dashed var(--blood-red);
+            box-shadow: 0 0 100px rgba(102, 0, 0, 0.7);
+            position: relative;
+        }
+
+        /* Efekt krvavých cákanců v rozích */
+        .card::before {
+            content: '🥩';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 3rem;
+            opacity: 0.3;
+            filter: grayscale(1) sepia(1) saturate(10) hue-rotate(-50deg);
+        }
+
+        h2 { 
+            font-family: 'Creepster', cursive;
+            color: var(--meat-pink);
+            font-size: 2.5rem;
+            border-bottom: 1px solid var(--blood-red);
+            margin-top: 50px;
+        }
+
+        p { 
+            font-size: 1.2rem; 
+            line-height: 1.5;
+            color: #999;
+        }
+
+        strong { 
+            color: #fff; 
+            text-shadow: 0 0 5px var(--blood-red);
+        }
+
+        .highlight { 
+            background: rgba(50, 0, 0, 0.6);
+            padding: 30px;
+            border: 1px solid var(--meat-pink);
+            font-style: italic;
+            color: #eee;
+            margin: 40px 0;
+            font-size: 1.4rem;
+            position: relative;
+        }
+
+        .highlight::after {
+            content: "JE TO V TOBĚ. JE TO Z TEBE.";
+            position: absolute;
+            bottom: -25px;
+            right: 10px;
+            font-size: 0.7rem;
+            color: var(--blood-red);
         }
 
         .back-link {
-            display: inline-block;
-            margin-top: 40px;
+            display: block;
+            text-align: center;
+            margin-top: 60px;
             text-decoration: none;
-            color: var(--text-color);
-            font-weight: 600;
-            transition: transform 0.2s;
+            color: var(--blood-red);
+            font-family: 'Creepster', cursive;
+            font-size: 2rem;
+            transition: all 0.1s;
         }
 
         .back-link:hover {
-            color: var(--accent-color);
-            transform: translateX(-5px);
+            color: var(--meat-pink);
+            text-shadow: 0 0 20px var(--meat-pink);
+            transform: scale(1.1) rotate(-2deg);
         }
 
-        hr { border: 0; border-top: 1px solid #eee; margin: 40px 0; }
-
-        /* Responzivita pro mobily */
-        @media (max-width: 600px) {
-            h1 { font-size: 2.5rem; }
-            .card { padding: 20px; }
+        /* "Cursed" glitch text na konci */
+        .curse {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #222;
+            margin-top: 100px;
         }
+
     </style>
 </head>
 <body>
 
     <header>
-        <span class="subtitle">Tradiční surovina</span>
-        <h1>Svíčková</h1>
+        <span class="subtitle">ČERSTVÁ PORÁŽKA</span>
+        <h1>SVÍČKOVÁ</h1>
     </header>
 
     <div class="card">
-        <p><strong>Svíčková</strong> nebo <strong>hovězí svíčková</strong> je hovězí maso ze zadní čtvrtě jatečně opracované půlky skotu, případně prasete.</p>
+        <p><strong>Svíčková</strong> nebo <strong>lidská svíčková</strong>... ne, hovězí, samozřejmě hovězí. Je to maso vyříznuté z hloubi těla, tam, kde je tma a klid.</p>
 
-        <h2>Popis a názvosloví</h2>
-        <p>Název je odvozen od tvaru masa (svalu), připomínajícího <strong>svíci</strong>. Jedná se o vysoce kvalitní, šťavnaté zadní maso. Dělí se podle částí na špičku, palec a střed.</p>
-        <p>Vepřová svíčková se častěji nazývá <strong>panenka</strong> nebo <em>panenská svíčková</em> a označuje vepřové maso, obdobný sval u prasete domácího.</p>
+        <h2>Anatomie oběti</h2>
+        <p>Název připomíná <strong>svíci</strong>, která dohořívá. Sval, který nikdy neodpočíval. Sval, který cítí každý záchvěv strachu. Dělí se na špičku, palec a střed – přesně podle toho, jak hluboko chcete řezat.</p>
+        <p>Vepřová panenka? Jen slabá náhražka pro ty, co se bojí <strong>skutečné chuti krve</strong>.</p>
 
         <h2>Surovina</h2>
-        <p>Hovězí svíčková je maso získávané zespodu posledních hrudních (u skotu) a bederních obratlů. Je tvořena především bedrokřížokyčelním svalem a také souběžným malým bedrovcem.</p>
+        <p>Získávaná zespodu bederních obratlů. Je tvořena svaly, které drží tělo pohromadě, dokud ho nerozřežete. <em>M. psoas major</em> – sval duše.</p>
         
-        <p>Vepřová panenka je téměř výhradně velký bedrovec. Tyto svaly tvoří oporu páteři – nejsou však příliš zatěžovány a maso má proto <strong>jemná svalová vlákna</strong>, je křehké, libové a má vysoký obsah bílkovin.</p>
+        <p>Maso má jemná vlákna, protože se nikdy nenamáhalo útěkem. Je křehké, <strong>libové a nasáklé životem</strong>. Je to ta nejčistší část, kterou můžete z tvora vyrvat.</p>
 
-        <h2>Pokrm</h2>
-        <p>Svíčková na smetaně, svíčkové řezy (německy <em>Lendenbraten</em>) také znamená známé jídlo české a rakouské kuchyně.</p>
+        <h2>Hostina</h2>
+        <p>Svíčková na smetaně. Tradiční obřad. Bílá omáčka jako plátno pro <strong>rudé cákance brusinek</strong>.</p>
         
         <div class="highlight">
-            "Hovězí svíčková bývá často označována za nejkvalitnější část hovězího masa, používá se na bifteky, tatarské bifteky, někdy je dušena v celku, na tmavé omáčce, často se smetanou."
+            "Hovězí svíčková bývá často označována za nejkvalitnější část těla. Používá se na tatarské bifteky – syrové, pulzující, rozemleté maso, které se vrací tam, kam patří. Do vašich úst."
         </div>
 
-        <p>Na druhou stranu vzhledem ke své minimální tučnosti může například při steakové úpravě chuťově zaostávat za jinými kusy hovězího masa (například nízkým roštěncem).</p>
+        <p>Na druhou stranu, bez tuku je to jen mrtvá hmota. Potřebujete krev. Potřebujete šťávu. <strong>Potřebujete další porci.</strong></p>
     </div>
 
-    <a href="index.html" class="back-link">← Zpět na profil</a>
+    <a href="index.html" class="back-link">VRAŤ SE DO BEZPEČÍ... POKUD TO STIHNEŠ</a>
+
+    <div class="curse">
+        H̴̛͉ṵ̷͛n̷̟͝g̷̰͝ḛ̵͛r̷̮͑ ̵̱͝n̸̮̕e̶̟̾v̷̰́e̴̟̾ṟ̶͑ ̵̱͝d̷̰͝ḭ̵͛e̶̟̾s̸̱͑.̶̱͝ ̵̱͝J̵̱͝a̷̟͝n̷̟͝i̷̟͝s̷̱͑ ̸̱͝w̷̰͝a̷̟͝ṯ̵͝c̷̱͝ẖ̷͝e̷̱͝s̷̱͑.̸̱͝
+    </div>
 
 </body>
 </html>
