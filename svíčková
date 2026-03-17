@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Vše o svíčkové</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 20px; color: #333; }
+        h1 { color: #8b0000; border-bottom: 2px solid #8b0000; }
+        h2 { color: #555; margin-top: 30px; }
+        .highlight { background: #fff4e6; padding: 15px; border-left: 5px solid #ffa500; font-style: italic; }
+    </style>
+</head>
+<body>
+    <h1>Svíčková</h1>
+    <p><strong>Svíčková</strong> nebo <strong>hovězí svíčková</strong> je hovězí maso ze zadní čtvrtě jatečně opracované půlky skotu, případně prasete.</p>
 
+    <h2>Popis a názvosloví</h2>
+    <p>Název je odvozen od tvaru masa (svalu), připomínajícího svíci. Jedná se o vysoce kvalitní, šťavnaté zadní maso. Dělí se podle částí na špičku, palec a střed.</p>
+    <p><strong>Vepřová svíčková</strong> se častěji nazývá <strong>panenka</strong> nebo <strong>panenská svíčková</strong> a označuje vepřové maso, obdobný sval u prasete domácího.</p>
+
+    <h2>Surovina</h2>
+    <p>Hovězí svíčková je maso získávané zespodu posledních hrudních (u skotu) a bederních obratlů. Hovězí svíčková je tvořena především <em>bedrokřížokyčelním svalem</em> (m. iliopsoas) a také souběžným <em>malým bedrovcem</em> (m. psoas minor).</p>
+    <p>Vepřová panenka je téměř výhradně <em>velký bedrovec</em> (m. psoas major), malý bedrovec zakrněl. Všechny tyto svaly se upínají na bederní obratle a pánev a tvoří oporu páteři – nejsou však příliš zatěžovány a maso má proto jemná svalová vlákna, je křehké, libové a má vysoký obsah bílkovin.</p>
+
+    <h2>Pokrm</h2>
+    <p><strong>Svíčková na smetaně</strong>, svíčkové řezy (německy Lendenbraten, v Rakousku Lungenbraten, anglicky Beef tenderloin) také znamená známé jídlo české a rakouské kuchyně.</p>
+    <div class="highlight">
+        Hovězí svíčková bývá často označována za nejkvalitnější část hovězího masa, používá se na bifteky, tatarské bifteky, někdy je dušena v celku, na tmavé omáčce, často se smetanou.
+    </div>
+    <p>Na druhou stranu vzhledem ke své minimální tučnosti může například při steakové úpravě chuťově zaostávat za jinými kusy hovězího masa (například nízkým roštěncem).</p>
+    
+    <hr>
+    <a href="index.html">← Zpět na hlavní stránku</a>
+</body>
+</html>
