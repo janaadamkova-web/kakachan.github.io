@@ -6,7 +6,7 @@
     <title>Janis | Profil</title>
     <style>
         body {
-            font-family: sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f4f4f4;
             color: #333;
             line-height: 1.6;
@@ -19,30 +19,49 @@
         .container {
             background: white;
             padding: 2.5rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            max-width: 400px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            max-width: 420px;
             text-align: center;
+            border-top: 5px solid #d35400; /* Barevný detail nahoře */
         }
-        h1 { color: #d35400; margin-top: 0; }
-        .interests { font-style: italic; color: #555; }
+        h1 { 
+            color: #d35400; 
+            margin-top: 0;
+            font-size: 2rem;
+        }
+        .interests { 
+            font-style: italic; 
+            color: #777; 
+            margin: 15px 0;
+            padding: 10px;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
         
-        /* Styl tlačítka vytažený do CSS pro čistotu */
-        .btn-svickova {
+        /* Styl tlačítka pro navigaci na svíčkovou */
+        .btn-navigator {
             display: inline-block;
-            margin-top: 20px;
-            padding: 15px 25px;
-            background-color: #d9534f;
+            margin-top: 25px;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #d9534f 0%, #c9302c 100%);
             color: white;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 50px; /* Zakulacené moderní tlačítko */
             font-weight: bold;
-            transition: transform 0.2s, background-color 0.2s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(217, 83, 79, 0.3);
         }
-        .btn-svickova:hover {
-            background-color: #c9302c;
-            transform: scale(1.05);
+        
+        .btn-navigator:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(217, 83, 79, 0.4);
+            filter: brightness(1.1);
+        }
+
+        .btn-navigator:active {
+            transform: translateY(0);
         }
     </style>
 </head>
@@ -50,13 +69,14 @@
 
     <div class="container">
         <h1>Ahoj, já jsem Janis</h1>
+        
         <p>Mám ráda <strong>svíčkovou a svíčky</strong>. Doma mi dělá společnost kočka a ze všeho nejraději spím.</p>
         
         <p class="interests">Fotím, točím, píšu a žiju type shit.</p>
         
         <p>Sportuju, lezu a taekwonduju. Mám pár kamarádů a mám je celkem ráda.</p>
 
-        <a href="svickova.html" class="btn-svickova">🥩 Přečíst si o svíčkové</a>
+        <a href="svickova.html" class="btn-navigator">🥩 Vše o svíčkové</a>
     </div>
 
 </body>
