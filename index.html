@@ -37,10 +37,6 @@
             background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
             background-size: 400% 400%;
             animation: backgroundPsychadelic 10s ease infinite;
-            <p>
-    Podívejte se na můj <a href="cpp.html">projekt o Petříně</a>, který jsem vytvořil v LaTeXu.
-</p>
-            
             color: #fff;
             font-family: 'Segoe UI', sans-serif;
             line-height: 1.4;
@@ -49,25 +45,24 @@
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            overflow: hidden; /* Zabrání scrollování, pokud to přeženeme */
-            cursor: url('https://cur.cursors-4u.net/symbols/sym-1/sym46.cur'), auto; /* Divný kurzor */
+            overflow: hidden; 
+            cursor: url('https://cur.cursors-4u.net/symbols/sym-1/sym46.cur'), auto; 
         }
 
         .container {
-            background: rgba(0, 0, 0, 0.8); /* Černé průhledné pozadí */
+            background: rgba(0, 0, 0, 0.8); 
             padding: 3rem;
-            border-radius: 0; /* Ostré rohy jsou divnější */
-            box-shadow: 0 0 50px rgba(0, 255, 0, 0.5); /* Zelené neonové záření */
+            border-radius: 0; 
+            box-shadow: 0 0 50px rgba(0, 255, 0, 0.5); 
             max-width: 450px;
             text-align: center;
-            border: 10px dashed #ff00ff; /* Bláznivý rámeček */
+            border: 10px dashed #ff00ff; 
             animation: rotateContainer 5s linear infinite;
             position: relative;
         }
 
-        /* Glitch efekt pro nadpis */
         h1 { 
-            font-family: 'Nabla', cursive; /* Extrémně divný font */
+            font-family: 'Nabla', cursive; 
             font-size: 4rem;
             margin-top: 0;
             margin-bottom: 10px;
@@ -83,17 +78,17 @@
         }
 
         strong {
-            color: #00ff00; /* Neonově zelená */
-            font-family: 'Creepster', cursive; /* Hororový font pro důležitá slova */
+            color: #00ff00; 
+            font-family: 'Creepster', cursive; 
             font-size: 1.4rem;
         }
 
         .interests { 
             font-style: italic; 
-            color: #ff00de; /* Neonově růžová */
+            color: #ff00de; 
             margin: 20px 0;
             padding: 15px;
-            border: 2px solid #00ffff; /* Neonově modrá */
+            border: 2px solid #00ffff; 
             background: repeating-linear-gradient(
               45deg,
               #000,
@@ -103,17 +98,16 @@
             );
         }
         
-        /* Totálně šílené tlačítko */
         .btn-navigator {
             display: inline-block;
-            margin-top: 30px;
-            padding: 20px 40px;
+            margin-top: 15px; /* Trochu jsem zmenšil margin, aby se tam vešly obě */
+            padding: 15px 30px;
             background: #000;
             color: #ff00de;
             text-decoration: none;
             border: 5px solid #ff00de;
             font-weight: bold;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-family: 'Creepster', cursive;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -126,8 +120,8 @@
         .btn-navigator:hover {
             background: #ff00de;
             color: #000;
-            transform: scale(1.2) rotate(-5deg);
-            animation: none; /* Vypne pulzování při najetí */
+            transform: scale(1.1) rotate(-3deg);
+            animation: none; 
             box-shadow: 0 0 100px #ff00de;
         }
 
@@ -135,7 +129,6 @@
             transform: scale(0.9) rotate(5deg);
         }
 
-        /* Divný element navíc pro efekt */
         .container::before {
             content: 'TYPE SHIT';
             position: absolute;
@@ -162,6 +155,8 @@
         <p>Sportuju, lezu a taekwonduju. Mám pár kamarádů a mám je celkem ráda.</p>
 
         <a href="svickova.html" class="btn-navigator">🥩 SVÍČKOVÁ!!!</a>
+        <br>
+        <a href="cpp.html" class="btn-navigator">🗼 PROJEKT PETŘÍN</a>
     </div>
 
 </body>
